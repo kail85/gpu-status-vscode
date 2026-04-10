@@ -18,6 +18,7 @@
     "status bar",
     "monitor"
   ],
+  "license": "MIT",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
