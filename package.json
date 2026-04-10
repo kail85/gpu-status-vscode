@@ -1,0 +1,51 @@
+{
+  "name": "gpu-status",
+  "displayName": "GPU Status",
+  "description": "Shows GPU VRAM usage in the status bar. Supports NVIDIA (nvidia-smi) and AMD on Linux (rocm-smi).",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["gpu", "nvidia", "amd", "vram", "status bar", "monitor"],
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/gpu-status-vscode"
+  },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gpuStatus.selectGpu",
+        "title": "GPU Status: Select GPU to Display"
+      }
+    ],
+    "configuration": {
+      "title": "GPU Status",
+      "properties": {
+        "gpuStatus.pollInterval": {
+          "type": "number",
+          "default": 2000,
+          "minimum": 500,
+          "description": "How often to refresh GPU stats, in milliseconds."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.x",
+    "typescript": "^5.x"
+  }
+}
