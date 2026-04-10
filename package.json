@@ -2,19 +2,30 @@
   "name": "gpu-status",
   "displayName": "GPU Status",
   "description": "Shows GPU VRAM usage in the status bar. Supports NVIDIA (nvidia-smi) and AMD on Linux (rocm-smi).",
-  "version": "0.1.0",
-  "publisher": "your-publisher-name",
+  "version": "0.1.1",
+  "publisher": "kylewang",
   "engines": {
     "vscode": "^1.74.0"
   },
-  "categories": ["Other"],
-  "keywords": ["gpu", "nvidia", "amd", "vram", "status bar", "monitor"],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "gpu",
+    "nvidia",
+    "amd",
+    "vram",
+    "status bar",
+    "monitor"
+  ],
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/gpu-status-vscode"
+    "url": "https://github.com/kail85/gpu-status-vscode"
   },
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
